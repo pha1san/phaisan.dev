@@ -25,7 +25,7 @@ const icons: { [k: string]: IconType } = {
 interface ILinkIcon {
   index: number;
   color: string;
-  onHoverColor: any;
+  onHoverColor: string;
   url: string;
   label: string;
   icon: string;
@@ -34,7 +34,7 @@ interface ILinkIcon {
 interface ILinkIconBar extends StackProps {
   links: LinksType[];
   color?: string;
-  onHoverColor?: any;
+  onHoverColor?: string;
 }
 
 const LinkIcon: FC<ILinkIcon> = ({ index, color, onHoverColor, url, label, icon }) => (
