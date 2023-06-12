@@ -8,7 +8,7 @@ module.exports = {
     "react-app",
     "react-app/jest",
     "plugin:@typescript-eslint/recommended",
-    "plugin:tailwindcss/recommended",
+    // "plugin:tailwindcss/recommended",
   ],
   parserOptions: {
     babelOptions: {
@@ -36,7 +36,7 @@ module.exports = {
     "import/order": [
       1,
       {
-        groups: ["external", "builtin", "internal", "sibling", "parent", "index"],
+        groups: ["builtin", "external", "internal", "sibling", "parent", "index"],
         pathGroups: [
           ...getDirectoriesToSort().map((singleDir) => ({
             pattern: `${singleDir}/**`,
@@ -55,12 +55,18 @@ module.exports = {
             group: "internal",
             position: "after",
           },
+          {
+            pattern: "react",
+            group: "builtin",
+            position: "before",
+          },
         ],
-        pathGroupsExcludedImportTypes: ["internal"],
+        pathGroupsExcludedImportTypes: ["react", "internal"],
         alphabetize: {
           order: "asc",
           caseInsensitive: true,
         },
+        "newlines-between": "always",
       },
     ],
   },
