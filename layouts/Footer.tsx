@@ -8,7 +8,7 @@ import { animateScroll as scroll } from "react-scroll";
 import LinkIconBar from "@/components/LinkIconBar";
 import { links } from "@/constants/links";
 
-const GITHUB_URL = "https://github.com/jcserv/portfolio";
+// const GITHUB_URL = "https://github.com/jcserv/portfolio";
 
 export default function Footer() {
   // const [forks, setForks] = useState(0)
@@ -25,15 +25,15 @@ export default function Footer() {
   // }, [])
   return (
     <Box as="footer" mt={12} height="100%" textAlign="center" className="app">
-      <Link href={GITHUB_URL} isExternal>
-        <Text fontSize="sm">
-          Made with{" "}
-          <span aria-label="heart" role="img">
-            &#128153;
-          </span>
-          {" (and React) by Phaisan Uyarnontruk"}
-        </Text>
-      </Link>
+      {/* <Link href={GITHUB_URL} isExternal> */}
+      <Text fontSize="sm">
+        Made with{" "}
+        <span aria-label="heart" role="img">
+          &#128153;
+        </span>
+        {" (and React) by Phaisan Uyarnontruk"}
+      </Text>
+      {/* </Link> */}
       {/* <Stack direction="row" alignItems="center" justify="center">
         <GoRepoForked /> <Text size="xs">{forks}</Text>
         <GoStar /> <Text size="xs">{stars}</Text>
