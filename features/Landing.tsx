@@ -31,17 +31,6 @@ export default function Landing() {
   return (
     <SectionContainer id="landing" name="landing" headerText={header}>
       <LinkIconBar links={links} />
-      {/* <Button
-        as={URL}
-        colorScheme={secondary}
-        variant="ghost"
-        size="lg"
-        mb="2"
-        href="/resume.pdf"
-        isExternal
-      >
-        Download resume
-      </Button> */}
       <Link activeClass="active" to="about" spy smooth offset={-70} duration={500}>
         <VStack>
           <Text
