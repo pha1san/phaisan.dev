@@ -50,3 +50,18 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(221, 221, 236, 1);
 }
+
+.image {
+  box-shadow: 5px 10px 18px #888888;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 18px #3b5998;
+}
+
+.link {
+  color: #077bff i !important;
+}
