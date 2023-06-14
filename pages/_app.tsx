@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   const pathToTitle: pathToTitleType = {
-    "/": "Phaisan Uyarnontruk - Full Stack Developer",
+    "/": "Phaisan Uyarnontruk - Frontend Developer",
   };
 
   return (

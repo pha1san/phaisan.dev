@@ -23,7 +23,7 @@ export default function Landing() {
       </h1>
       <h1 className="text-[2.5em]" style={{ color: primary }}>
         {" "}
-        a <strong style={{ color: secondary }}>full stack developer.</strong>
+        a <strong style={{ color: secondary }}>frontend developer.</strong>
       </h1>
     </div>
   );
