@@ -1,10 +1,10 @@
-import { FC, PropsWithChildren } from "react"
+import { FC, PropsWithChildren } from "react";
 
-import Head from "next/head"
-import Script from "next/script"
+import Head from "next/head";
+import Script from "next/script";
 
-import Footer from "./Footer"
-import Navbar from "./NavBar"
+import Footer from "./Footer";
+import Navbar from "./NavBar";
 
 const LayoutDefault: FC<PropsWithChildren<{ title: string }>> = ({ children, title }) => {
   return (
@@ -12,7 +12,7 @@ const LayoutDefault: FC<PropsWithChildren<{ title: string }>> = ({ children, tit
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-4EBXMSK3XY" strategy="worker" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-T5NQBXJG35" strategy="worker" />
       <Script id="google-analytics" strategy="worker">
         {`
             window.dataLayer = window.dataLayer || [];
@@ -26,6 +26,6 @@ const LayoutDefault: FC<PropsWithChildren<{ title: string }>> = ({ children, tit
       <main className="main">{children}</main>
       <Footer />
     </div>
-  )
-}
-export default LayoutDefault
+  );
+};
+export default LayoutDefault;
