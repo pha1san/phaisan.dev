@@ -8,7 +8,7 @@ import NavBar from "@/layouts/NavBar";
 
 const inter = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,6 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
       </body>
+      <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
+
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-T5NQBXJG35" strategy="worker" />
       <Script id="google-analytics" strategy="worker">
         {`
