@@ -6,7 +6,7 @@
   html,
   body,
   #__next {
-    @apply h-full text-light-text;
+    @apply h-full;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -33,5 +33,16 @@
 
   .min-height-screen {
     min-height: calc(100vh - 60px);
+  }
+
+  .box-shadow {
+    box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.175);
+    // &:hover {
+    //   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    // }
+  }
+
+  .box-shadow-2 {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
   }
 }

@@ -69,6 +69,7 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
+    "react/self-closing-comp": "warn",
   },
 };
 
