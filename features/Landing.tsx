@@ -1,29 +1,25 @@
-"use client";
-
-import React from "react";
-
-import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 import SectionContainer from "@/components/SectionContainer";
 import SocialLinkButton from "@/components/SocialLinkButton";
+import TechStacksWrapper from "@/components/TechStacksWrapper";
+import landingPic from "@/public/assets/images/landing.svg";
 
 export default function Landing() {
   return (
-    <SectionContainer className="flex h-full flex-col pt-14">
-      <div className="flex">
+    <SectionContainer className="flex flex-col justify-center">
+      <div className="flex justify-between gap-20 pt-32">
         <div>
-          <h1>
-            <span>Phaisan U.</span> Full-stack Developer
+          <h1 className="text-5xl font-bold leading-[62px]">
+            <span className="text-blue-400">Phaisan U.</span> <br />
+            Full-stack Developer
           </h1>
-          <p>Based in Auckland, New Zealand </p>
-          <SocialLinkButton />
+          <p className="mt-2 text-2xl text-gray-600">Based in Auckland, New Zealand </p>
+          <SocialLinkButton className="mt-5" />
         </div>
-        <div className="relative w-1/3">
-          <Image src={"/assets/images/landing.png"} alt={""} fill />
-        </div>
+        <Image src={landingPic} alt={""} priority={true} />
       </div>
-      {/* <div>Tech Stack</div> */}
+      <TechStacksWrapper />
     </SectionContainer>
   );
 }

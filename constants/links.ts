@@ -7,17 +7,17 @@ export type LinksType = {
 export const links: LinksType[] = [
   {
     label: "Github",
-    icon: "github",
+    icon: "mdi:github",
     url: "https://github.com/pha1san/",
   },
   {
     label: "LinkedIn",
-    icon: "linkedin",
+    icon: "mdi:linkedin",
     url: "https://www.linkedin.com/in/phaisan01/",
   },
   {
     label: "Resume",
-    icon: "document",
+    icon: "mdi:file-document",
     url: "/resume.pdf",
   },
 ];
