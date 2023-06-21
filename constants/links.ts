@@ -22,20 +22,24 @@ export const links: LinksType[] = [
   },
 ];
 
-export type NavLinkType = { label: string; herf?: string };
+export type NavLinkType = { label: string; herf: string };
 
-export const navBtns: NavLinkType[] = [
+export const navLink: NavLinkType[] = [
   {
-    label: "About",
+    label: "👨🏻‍💻About me",
+    herf: "#about",
   },
   {
-    label: "Experience",
+    label: "💪🏼Experience",
+    herf: "#experience",
   },
   {
-    label: "Projects",
+    label: "💻Project",
+    herf: "#project",
   },
   {
-    label: "Contact",
+    label: "📱Contact",
+    herf: "#contact",
   },
 ];
 
