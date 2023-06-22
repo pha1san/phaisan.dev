@@ -15,7 +15,7 @@ const TechStacksWrapper = () => {
   return (
     <div className="my-16 flex flex-col items-center gap-10 pt-16" ref={hoverRef}>
       <h2 className="text-center text-2xl text-gray-600">Tech Stacks</h2>
-      <div className="flex min-h-[136px] gap-8">
+      <div className="flex min-h-[136px] flex-wrap justify-center gap-8">
         {techStacks.map((tech) => (
           <TechStackBox
             icon={tech.icon}

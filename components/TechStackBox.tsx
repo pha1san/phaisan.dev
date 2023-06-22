@@ -15,7 +15,7 @@ interface ITechStackBox extends HTMLProps<HTMLDivElement> {
 const TechStackBox: FC<ITechStackBox> = ({ className, icon, label, size = 48, isActive = false, ...props }) => {
   return (
     <div
-      className={clsx(className, "box-shadow rounded-2xl bg-white p-3", {
+      className={clsx(className, "box-shadow flex flex-col items-center rounded-2xl bg-white py-3", {
         "box-shadow-2": isActive,
       })}
       {...props}

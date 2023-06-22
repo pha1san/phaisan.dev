@@ -6,10 +6,7 @@ import clsx from "clsx";
 
 const SectionContainer: FC<PropsWithChildren<HTMLProps<HTMLSelectElement>>> = ({ children, className, ...props }) => {
   return (
-    <section
-      className={clsx(className, "min-height-screen mx-auto h-full w-full max-w-[1116px] scroll-m-32")}
-      {...props}
-    >
+    <section className={clsx(className, "min-height-screen mx-auto h-full w-full max-w-[1116px]")} {...props}>
       {children}
     </section>
   );
