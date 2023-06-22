@@ -9,10 +9,10 @@ import { navLink } from "@/constants/links";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const MobileMenu = () => {
-  const matches = useMediaQuery("(min-width: 768px)");
+  const isLarge = useMediaQuery("(min-width: 768px)");
   const [isOpen, setOpen] = useState<boolean>(false);
 
-  if (matches) return;
+  if (isLarge) return;
 
   return (
     <div>
