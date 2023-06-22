@@ -5,11 +5,11 @@ import Landing from "@/features/Landing";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-[0_0.5rem] flex flex-col justify-center items-center">
+    <main className="mt-[60px] px-5 ">
       <Landing />
       <About />
       <Experience />
       <Contact />
-    </div>
+    </main>
   );
 }

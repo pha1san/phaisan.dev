@@ -1,70 +1,50 @@
-import {
-  GridItem,
-  Image,
-  Link,
-  SimpleGrid,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
 import React, { FC } from "react";
 
-import { colors } from "@/theme";
+import Image from "next/image";
+import Link from "next/link";
+
+import HeaderBox from "@/components/HeaderBox";
 import SectionContainer from "@/components/SectionContainer";
-
-const Bio: FC<{ secondary: string }> = ({ secondary }) => (
-  <GridItem>
-    <VStack m="auto" w="75%" spacing="12px" pt="5%">
-      <Text>
-        Hello! My name is Phaisan, a software engineering graduate from AUT. I have 2+ years of substantial experience
-        as a<strong style={{ color: secondary }}> Frontend Developer. </strong>
-        My key strengths lie in <strong style={{ color: secondary }}>React and NextJs,</strong> technologies I've honed
-        over my career and used to deliver effective, user-focused solutions.
-      </Text>
-      <Text>
-        One of my most significant accomplishments includes leading a dedicated team to develop MVP that played a vital
-        role in securing a{" "}
-        <strong style={{ color: secondary }}>
-          <Link href="https://blockchain.news/news/defi-platform-forward-raises-$5m-in-seed-funding" isExternal>
-            $5M investment for the company.
-          </Link>
-        </strong>
-      </Text>
-      <Text>
-        As I look to the future, I'm eager to apply my experience and skills in a new, challenging environment where I
-        can continue to make significant contributions and drive the evolution of the digital landscape.
-      </Text>
-    </VStack>
-  </GridItem>
-);
-
-const Headshot = () => (
-  <GridItem>
-    <Image
-      m="auto"
-      src="/me.jpg"
-      alt="Phaisan Uyarnontruk"
-      zIndex={1}
-      className="image"
-      onClick={() => {
-        window.open("http://linkedin.com/in/phaisan01");
-      }}
-      width={300}
-      // height={300}
-    />
-  </GridItem>
-);
+import iconBg from "@/public/assets/icons/picIconSet.svg";
+import mePic from "@/public/me.jpg";
 
 export default function About() {
-  const shouldAlternate = useBreakpointValue({ base: false, md: true });
-  const secondary = useColorModeValue(colors.secondary.light, colors.secondary.dark);
   return (
-    <SectionContainer id="about" name="about" headerMt="-5%" headerText="About Me" useHeaderStyle>
-      <SimpleGrid pl="10%" pt="5%" pr="10%" spacing={12} columns={[1, null, 2]} justifyContent="center">
-        {shouldAlternate ? <Bio secondary={secondary} /> : <Headshot />}
-        {shouldAlternate ? <Headshot /> : <Bio secondary={secondary} />}
-      </SimpleGrid>
+    <SectionContainer id="about" name="about" className="flex flex-col items-center gap-12 py-32 md:flex-row">
+      <div className="relative w-3/5 md:w-1/3">
+        <Image src={mePic} alt="Phaisan" className="box-shadow-3 rounded-full" />
+        <Image src={iconBg} alt="icons" className="absolute bottom-0 left-[-22px] z-[-1]" />
+        <div className="bg-blur absolute inset-y-0 right-0 z-[-2] w-2/3 translate-x-[-10%] translate-y-[35%] rounded-full" />
+      </div>
+      <div className="flex flex-col md:w-2/3">
+        <HeaderBox title={"👨🏻‍💻About me"} desc={"Highly skilled frontend developer, Seeking challenges."} />
+        <div className="mt-7 px-6 text-sm md:text-base">
+          <p>
+            Hello! My name is Phaisan, a software engineering graduate from AUT. I have 2+ years of substantial
+            experience as a<span className="font-semibold text-blue-300"> Frontend Developer. </span>
+            My key strengths lie in <strong className="text-blue-300">React and NextJs,</strong> technologies I&apos;ve
+            honed over my career and used to deliver effective, user-focused solutions.
+          </p>
+          <br />
+          <p>
+            One of my most significant accomplishments includes leading a dedicated team to develop MVP that played a
+            vital role in securing a{" "}
+            <strong className="text-blue-300">
+              <Link
+                href="https://blockchain.news/news/defi-platform-forward-raises-$5m-in-seed-funding"
+                target="_blank"
+              >
+                $5M investment for the company.
+              </Link>
+            </strong>
+          </p>
+          <br />
+          <p>
+            As I look to the future, I&apos;m eager to apply my experience and skills in a new, challenging environment
+            where I can continue to make significant contributions and drive the evolution of the digital landscape.
+          </p>
+        </div>
+      </div>
     </SectionContainer>
   );
 }

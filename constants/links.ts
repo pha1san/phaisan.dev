@@ -1,41 +1,79 @@
+const Github = "https://github.com/pha1san/";
+const LinkedIn = "https://linkedin.com/in/phaisan01/";
+const Email = "p.uyarnontruk@gmail.com";
+const Mobile = "+64 22 495 6916";
+
+const EmailURL = "mailto: " + Email;
+const MobileURL = "tel: " + Mobile;
+
 export type LinksType = {
   label: string;
   icon: string;
   url: string;
+  text?: string;
 };
 
 export const links: LinksType[] = [
   {
     label: "Github",
-    icon: "github",
-    url: "https://github.com/pha1san/",
+    icon: "mdi:github",
+    url: Github,
   },
   {
     label: "LinkedIn",
-    icon: "linkedin",
-    url: "https://www.linkedin.com/in/phaisan01/",
+    icon: "mdi:linkedin",
+    url: LinkedIn,
   },
   {
     label: "Resume",
-    icon: "document",
+    icon: "mdi:file-document",
     url: "/resume.pdf",
   },
 ];
 
-export type NavLinkType = { label: string; herf?: string };
+export const contacts: LinksType[] = [
+  {
+    label: "Email",
+    icon: "ic:baseline-email",
+    url: EmailURL,
+    text: Email,
+  },
+  {
+    label: "Github",
+    icon: "mdi:github",
+    url: Github,
+  },
+  {
+    label: "Call",
+    icon: "ic:round-call",
+    url: MobileURL,
+    text: Mobile,
+  },
+  {
+    label: "LinkedIn",
+    icon: "mdi:linkedin",
+    url: LinkedIn,
+  },
+];
 
-export const navBtns: NavLinkType[] = [
+export type NavLinkType = { label: string; herf: string };
+
+export const navLink: NavLinkType[] = [
   {
-    label: "About",
+    label: "👨🏻‍💻About me",
+    herf: "#about",
   },
   {
-    label: "Experience",
+    label: "💪🏼Experience",
+    herf: "#experience",
   },
   {
-    label: "Projects",
+    label: "💻Project",
+    herf: "#project",
   },
   {
-    label: "Contact",
+    label: "📱Contact",
+    herf: "#contact",
   },
 ];
 

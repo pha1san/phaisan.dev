@@ -1,50 +1,31 @@
-import React from "react";
+import Image from "next/image";
 
-import { Text, useColorModeValue, VStack } from "@chakra-ui/react";
-import clsx from "clsx";
-import { BsChevronDown } from "react-icons/bs";
-import Jump from "react-reveal/Jump";
-import { Link } from "react-scroll";
-
-import LinkIconBar from "@/components/LinkIconBar";
 import SectionContainer from "@/components/SectionContainer";
-import { links } from "@/constants/links";
-// import styles from "../../styles/sections/Landing.module.css";
-import { colors } from "@/theme";
+import SocialLinkButton from "@/components/SocialLinkButton";
+import TechStacksWrapper from "@/components/TechStacksWrapper";
+import landingPic from "@/public/assets/images/landing.svg";
+import clsx from "clsx";
 
 export default function Landing() {
-  const primary = useColorModeValue(colors.primary.dark, colors.primary.light);
-  const secondary = useColorModeValue(colors.secondary.light, colors.secondary.dark);
-
-  const header = (
-    <div className="text-center pb-[50px]">
-      <h1 className="text-[2.5em]" style={{ color: primary }}>
-        Hi, I&apos;m Phaisan Uyarnontruk,{" "}
-      </h1>
-      <h1 className="text-[2.5em]" style={{ color: primary }}>
-        {" "}
-        a <strong style={{ color: secondary }}>frontend developer.</strong>
-      </h1>
-    </div>
-  );
-
   return (
-    <SectionContainer id="landing" name="landing" headerText={header}>
-      <LinkIconBar links={links} />
-      <Link activeClass="active" to="about" spy smooth offset={-70} duration={500}>
-        <VStack>
-          <Text
-            as="strong"
-            _hover={{ color: secondary }}
-            className={clsx("font-bold text-[1.25em] pb-5 transition-[all_0.2s_ease-in-out]", "hover:scale-[1.1]")}
-          >
-            Learn More
-          </Text>
-          <Jump forever duration={1500}>
-            <BsChevronDown />
-          </Jump>
-        </VStack>
-      </Link>
+    <SectionContainer className="flex flex-col justify-center">
+      <div
+        className={clsx(
+          "flex flex-col-reverse items-center justify-between gap-20 pt-14",
+          "md:flex-row md:items-start md:pt-32"
+        )}
+      >
+        <div>
+          <h1 className="text-3xl font-bold leading-[62px] md:text-5xl">
+            <span className="text-blue-400">Phaisan U.</span> <br />
+            Frontend Developer
+          </h1>
+          <p className="mt-2 text-lg text-gray-600 md:text-2xl">Based in Auckland, New Zealand </p>
+          <SocialLinkButton className="mt-5" />
+        </div>
+        <Image src={landingPic} alt={""} priority={true} className="md:w-[min(45%,420px)]" />
+      </div>
+      <TechStacksWrapper />
     </SectionContainer>
   );
 }

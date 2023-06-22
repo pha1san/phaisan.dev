@@ -1,64 +1,25 @@
-import React from "react";
+import Link from "next/link";
 
-import { Box, Button, Spacer, Stack, useColorModeValue } from "@chakra-ui/react";
-import { animateScroll as scroll, Link as ScrollLink } from "react-scroll";
-import Sticky from "react-stickynode";
+import { navLink } from "@/constants/links";
 
-import ColorModeButton from "@/components/ColorModeButton";
-import { navBtns } from "@/constants/links";
-
-import NavMenu from "./MobileMenu";
-
-import { colors } from "../theme";
-
-const Logo = () => {
-  const logo = useColorModeValue("/logo.png", "/logo-dark.png");
-  return (
-    <Box m="2">
-      <img alt="" src={logo} width="60" height="60" onClick={scroll.scrollToTop} />
-    </Box>
-  );
-};
-
-const NavButtons = () => {
-  const btns = navBtns.map((btn) => (
-    <Button key={btn.label} size="sm" variant="link">
-      <ScrollLink to={btn.label.toLowerCase()} spy smooth offset={-70} duration={500}>
-        {btn.label}
-      </ScrollLink>
-    </Button>
-  ));
-  return <>{btns}</>;
-};
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
-  const primary = useColorModeValue(colors.primary.light, colors.primary.dark);
-
   return (
-    <Sticky enabled innerZ={99}>
-      <Stack
-        as="header"
-        w="100%"
-        direction={["row", "row", "row", "row"]}
-        alignItems="center"
-        justifyContent="center"
-        bg={primary}
-      >
-        <Logo />
-        <Spacer />
-
-        <Stack
-          display={{ base: "none", sm: "none", md: "flex" }}
-          width={{ sm: "full", md: "auto" }}
-          spacing="24px"
-          direction={["column", "row", "row", "row"]}
-          alignItems="center"
-        >
-          <NavButtons />
-          <ColorModeButton mr="12px" />
-        </Stack>
-        <NavMenu />
-      </Stack>
-    </Sticky>
+    <nav className="fixed inset-x-0 top-0 z-[99] flex h-[60px] w-screen items-center justify-between bg-white px-5 shadow-[0px_2px_4px_rgba(0,0,0,0.075)]">
+      <div className="mx-auto flex w-full max-w-[1116px] items-center justify-between">
+        <Link href="/" className="text-2xl font-bold" scroll={false}>
+          👋 Phaisan.dev
+        </Link>
+        <div className="hidden gap-7 md:flex">
+          {navLink.map((link) => (
+            <a key={link.herf} href={link.herf} className="font-medium">
+              {link.label}
+            </a>
+          ))}
+        </div>
+        <MobileMenu />
+      </div>
+    </nav>
   );
 }

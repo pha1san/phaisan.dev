@@ -1,43 +1,48 @@
-import { FC } from "react";
+"use client";
 
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Stack, useDisclosure } from "@chakra-ui/react";
-import { Link as ScrollLink } from "react-scroll";
+import React, { useState } from "react";
 
-import ColorModeButton from "@/components/ColorModeButton";
-import { navBtns } from "@/constants/links";
+import { Icon } from "@iconify/react";
 
-const MenuToggle: FC<{ isOpen: boolean; onOpen: () => void }> = ({ isOpen, onOpen }) => (
-  <Box display={{ base: "block", md: "none" }} pr={4}>
-    <Button onClick={onOpen}>{isOpen ? <CloseIcon /> : <HamburgerIcon />}</Button>
-  </Box>
-);
+import { MenuButton } from "@/components/MenuButton";
+import { navLink } from "@/constants/links";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
-const NavMenu: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const MobileMenu = () => {
+  const isLarge = useMediaQuery("(min-width: 768px)");
+  const [isOpen, setOpen] = useState<boolean>(false);
+
+  if (isLarge) return;
+
   return (
-    <>
-      <MenuToggle isOpen={isOpen} onOpen={onOpen} />
-      <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerBody>
-              <Stack alignItems="center" justifyContent="center" direction={["column"]} spacing="24px" mt="20vh">
-                {navBtns.map((btn) => (
-                  <Button key={btn.label} size="lg" variant="link" mb={2} onClick={onClose}>
-                    <ScrollLink to={btn.label.toLowerCase()} spy smooth offset={-70} duration={500} onClick={onClose}>
-                      {btn.label}
-                    </ScrollLink>
-                  </Button>
-                ))}
-                <ColorModeButton />
-              </Stack>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
-      </Drawer>
-    </>
+    <div>
+      <MenuButton
+        isOpen={isOpen}
+        onClick={() => setOpen((isOpen) => !isOpen)}
+        strokeWidth="2"
+        color="#454561"
+        lineProps={{ strokeLinecap: "round" }}
+        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        width="18"
+        height="14"
+      />
+      {isOpen && (
+        <div className="fixed left-0 top-[60px] z-[10] flex h-screen w-screen flex-col gap-11 bg-white px-6 py-11">
+          {navLink.map((link) => (
+            <a
+              key={link.herf}
+              href={link.herf}
+              className={"flex shrink-0 items-center justify-between"}
+              onClick={() => setOpen(false)}
+            >
+              {link.label}
+              <Icon icon={"carbon:chevron-right"} width={20} height={20} />
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
-export default NavMenu;
+export default MobileMenu;

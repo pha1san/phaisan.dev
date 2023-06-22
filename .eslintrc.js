@@ -8,7 +8,7 @@ module.exports = {
     "react-app",
     "react-app/jest",
     "plugin:@typescript-eslint/recommended",
-    // "plugin:tailwindcss/recommended",
+    "plugin:tailwindcss/recommended",
   ],
   parserOptions: {
     babelOptions: {
@@ -32,7 +32,7 @@ module.exports = {
         ignoreDeclarationSort: true,
       },
     ],
-    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-custom-classname": "off",
     "import/order": [
       1,
       {
@@ -69,6 +69,7 @@ module.exports = {
         "newlines-between": "always",
       },
     ],
+    "react/self-closing-comp": "warn",
   },
 };
 
