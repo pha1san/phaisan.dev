@@ -12,7 +12,7 @@ export default function About() {
   return (
     <SectionContainer id="about" name="about" className="flex flex-col items-center gap-12 py-32 md:flex-row">
       <div className="relative w-3/5 md:w-1/3">
-        <Image src={mePic} alt="Phaisan" placeholder="blur" className="box-shadow-3 rounded-full" />
+        <Image src={mePic} alt="Phaisan" className="box-shadow-3 rounded-full" />
         <Image src={iconBg} alt="icons" className="absolute bottom-0 left-[-22px] z-[-1]" />
         <div className="bg-blur absolute inset-y-0 right-0 z-[-2] w-2/3 translate-x-[-10%] translate-y-[35%] rounded-full" />
       </div>
