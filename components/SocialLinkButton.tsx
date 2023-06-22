@@ -9,7 +9,7 @@ import { Icon } from "./Icons";
 
 const SocialLinkButton: FC<PropsWithChildren<HTMLProps<HTMLDivElement>>> = ({ className, ...prop }) => {
   return (
-    <div className={clsx("flex gap-4", className)}>
+    <div className={clsx("flex gap-4", className)} {...prop}>
       {links.map((link) => (
         <Link href={link.url} key={link.label} target="_blank">
           <Icon icon={link.icon} width={32} height={32} />

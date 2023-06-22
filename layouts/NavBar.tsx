@@ -1,13 +1,12 @@
 import Link from "next/link";
 
-import { MenuButton } from "@/components/MenuButton";
 import { navLink } from "@/constants/links";
 
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-[99] flex h-[60px] w-screen items-center justify-between bg-white shadow-[0px_2px_4px_rgba(0,0,0,0.075)] px-5">
+    <nav className="fixed inset-x-0 top-0 z-[99] flex h-[60px] w-screen items-center justify-between bg-white px-5 shadow-[0px_2px_4px_rgba(0,0,0,0.075)]">
       <div className="mx-auto flex w-full max-w-[1116px] items-center justify-between">
         <Link href="/" className="text-2xl font-bold" scroll={false}>
           👋 Phaisan.dev
