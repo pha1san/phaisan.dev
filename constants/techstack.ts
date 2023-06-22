@@ -13,6 +13,10 @@ export const techStacks: TechStacksType[] = [
     icon: "vscode-icons:file-type-css",
   },
   {
+    label: "Java Script",
+    icon: "logos:javascript",
+  },
+  {
     label: "Type Script",
     icon: "logos:typescript-icon",
   },
