@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import Footer from "@/layouts/Footer";
 import NavBar from "@/layouts/NavBar";
+import { Providers } from "./providers";
 
 const inter = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -12,6 +13,7 @@ const inter = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://phaisan.dev"),
   title: "Phaisan U. - Frontend Developer",
   description: "Phaisan U. - Portfolio",
   openGraph: { images: "/me.jpg" },
@@ -21,9 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <NavBar />
-        {children}
-        <Footer />
+        <Providers>
+          <NavBar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
       <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
 
