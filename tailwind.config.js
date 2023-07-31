@@ -24,6 +24,7 @@ module.exports = {
         blue: {
           300: "#6ea8fe",
           400: "#3d8bfd",
+          primary: "#0D6EFD",
         },
         light: { text: "#212529" },
       },

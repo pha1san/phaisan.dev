@@ -1,23 +1,20 @@
-import React, { FC } from "react";
-
-import Image from "next/image";
+"use client";
+import { m } from "framer-motion";
 import Link from "next/link";
 
 import HeaderBox from "@/components/HeaderBox";
 import SectionContainer from "@/components/SectionContainer";
-import iconBg from "@/public/assets/icons/picIconSet.svg";
-import mePic from "@/public/me.jpg";
 
 export default function About() {
   return (
     <SectionContainer id="about" name="about" className="flex flex-col items-center gap-12 py-32 md:flex-row">
       <div className="relative w-3/5 md:w-1/3">
-        <Image src={mePic} alt="Phaisan" className="box-shadow-3 rounded-full" />
-        <Image src={iconBg} alt="icons" className="absolute bottom-0 left-[-22px] z-[-1]" />
+        <m.img whileHover={{ scale: 1.1 }} src="/me.jpg" alt="Phaisan" className="box-shadow-3 rounded-full" />
+        <img src="/assets/icons/picIconSet.svg" alt="icons" className="absolute bottom-0 left-[-22px] z-[-1]" />
         <div className="bg-blur absolute inset-y-0 right-0 z-[-2] w-2/3 translate-x-[-10%] translate-y-[35%] rounded-full" />
       </div>
       <div className="flex flex-col md:w-2/3">
-        <HeaderBox title={"👨🏻‍💻About me"} desc={"Highly skilled frontend developer, Seeking challenges."} />
+        <HeaderBox title={"👨🏻‍💻About me"} desc={"Highly skilled frontend developer, Seeking challenges"} />
         <div className="mt-7 px-6 text-sm md:text-base">
           <p>
             Hello! My name is Phaisan, a software engineering graduate from AUT. I have 2+ years of substantial
@@ -34,9 +31,10 @@ export default function About() {
                 href="https://blockchain.news/news/defi-platform-forward-raises-$5m-in-seed-funding"
                 target="_blank"
               >
-                $5M investment for the company.
+                $5M investment in seed funding{" "}
               </Link>
             </strong>
+            for the company.
           </p>
           <br />
           <p>

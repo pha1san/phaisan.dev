@@ -1,10 +1,8 @@
-import Image from "next/image";
+import clsx from "clsx";
 
 import SectionContainer from "@/components/SectionContainer";
 import SocialLinkButton from "@/components/SocialLinkButton";
 import TechStacksWrapper from "@/components/TechStacksWrapper";
-import landingPic from "@/public/assets/images/landing.svg";
-import clsx from "clsx";
 
 export default function Landing() {
   return (
@@ -23,7 +21,7 @@ export default function Landing() {
           <p className="mt-2 text-lg text-gray-600 md:text-2xl">Based in Auckland, New Zealand </p>
           <SocialLinkButton className="mt-5" />
         </div>
-        <Image src={landingPic} alt={""} priority={true} className="md:w-[min(45%,420px)]" />
+        <img src="/assets/images/landing.svg" alt={""} className="md:w-[min(45%,420px)]" />
       </div>
       <TechStacksWrapper />
     </SectionContainer>
