@@ -9,7 +9,7 @@ const MobileURL = "tel: " + Mobile;
 export type LinksType = {
   label: string;
   icon: string;
-  url: string;
+  url?: string;
   text?: string;
 };
 
@@ -46,7 +46,7 @@ export const contacts: LinksType[] = [
   {
     label: "Call",
     icon: "ic:round-call",
-    url: MobileURL,
+    // url: MobileURL,
     text: Mobile,
   },
   {
