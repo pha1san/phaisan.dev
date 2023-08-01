@@ -16,19 +16,18 @@ const jobs: JobsType[] = [
     companyDesc: "A FinTech Startup, providing financial services in blockchain.",
     duration: "July 2021 - Present",
     description: [
-      <p key="1">
+      <p key="Project">
         <b>Project structure and development</b>: Evaluate and research the most effective frameworks and best practices
         to meet product needs.
       </p>,
-      <p key="2">
+      <p key="Collaboration">
         <b>Collaboration</b>: Participate in the early stages of product and UX thinking. Collaborate with UX/UI
         designers and researchers to inform the direction of the products we craft.
       </p>,
-      <p key="3">
+      <p key="management">
         <b>Resource management</b>: Utilize and initiate an agile workflow with JIRA, and lead a frontend team with
         excellent teamwork, leading to a 25% increase in productivity.
       </p>,
-      "Software Testing: Proficient in Cypress to create automate end to end-testing projects and unit testing",
     ],
     url: "https://fwx.finance/",
   },
@@ -37,7 +36,16 @@ const jobs: JobsType[] = [
     position: "Frontend Developer",
     companyDesc: "Providing Crypto Investment Advice, Insights and Analysis.",
     duration: "February 2023 - Present",
-    description: [""],
+    description: [
+      <p key="1">
+        <b>Project Development</b>: Developed interactive charts using the TradingView Chart Library, enhancing user
+        experience by providing visually engaging data representations.
+      </p>,
+      <p key="2">
+        <b>Quality Assurance</b>: Implemented and designed automated end-to-end testing using Cypress, ensuring the
+        highest level of software quality and significantly reducing testing time.
+      </p>,
+    ],
     url: "https://intnode.com/",
   },
 ];
