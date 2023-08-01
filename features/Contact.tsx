@@ -28,7 +28,12 @@ const Contact = () => {
         </div>
         <div className="flex flex-wrap gap-y-8 md:gap-y-16">
           {contacts.map((contact) => (
-            <m.div key={contact.label} className="flex items-center gap-4 md:w-1/2" whileHover={{ scale: 1.1 }}>
+            <m.div
+              key={contact.label}
+              className="flex items-center gap-4 md:w-1/2"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <div className="box-shadow-3 h-16 w-16 rounded-[32px] p-2 text-blue-400 md:h-20 md:w-20">
                 <Icon icon={contact.icon} width={isLarge ? 64 : 48} height={isLarge ? 64 : 48} />
               </div>
