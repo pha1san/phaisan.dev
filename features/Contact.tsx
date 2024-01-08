@@ -13,7 +13,7 @@ const Contact = () => {
   const isLarge = useMediaQuery("(min-width: 768px)");
 
   return (
-    <SectionContainer className="flex items-center justify-center py-32">
+    <SectionContainer className="flex items-center justify-center py-32" id="contact" name="contact">
       <div className="w-full max-w-[890px] ">
         <div className="relative  mb-12 md:mb-20">
           <HeaderBox title={"📱Contact"} desc={"Please don’t be hesitate to contact me!"} className="mx-auto w-fit" />
