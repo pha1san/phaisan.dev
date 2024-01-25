@@ -9,9 +9,14 @@ export default function About() {
   return (
     <SectionContainer id="about" name="about" className="flex flex-col items-center gap-12 py-32 md:flex-row">
       <div className="relative w-3/5 md:w-1/3">
-        <m.img whileHover={{ scale: 1.1 }} src="/me.jpg" alt="Phaisan" className="box-shadow-3 rounded-full" />
+        <m.img
+          whileHover={{ scale: 1.1 }}
+          src="/assets/images/landing.svg"
+          alt="Phaisan"
+          // className="box-shadow-3 rounded-full"
+        />
         <img src="/assets/icons/picIconSet.svg" alt="icons" className="absolute bottom-0 left-[-22px] z-[-1]" />
-        <div className="bg-blur absolute inset-y-0 right-0 z-[-2] w-2/3 translate-x-[-10%] translate-y-[35%] rounded-full" />
+        {/* <div className="bg-blur absolute inset-y-0 right-0 z-[-2] w-2/3 translate-x-[-10%] translate-y-[35%] rounded-full" /> */}
       </div>
       <div className="flex flex-col md:w-2/3">
         <HeaderBox title={"👨🏻‍💻About me"} desc={"Highly skilled frontend developer, Seeking challenges"} />

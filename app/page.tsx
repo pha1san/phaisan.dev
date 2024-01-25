@@ -11,8 +11,8 @@ export default function Home() {
       <MouseBackDrop />
       <Landing />
       <About />
-      {/* <Project /> */}
       <Experience />
+      {/* <Project /> */}
       <Contact />
     </main>
   );

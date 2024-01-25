@@ -11,7 +11,7 @@ const string = "Phaisan U.";
 
 export default function Landing() {
   return (
-    <SectionContainer className="flex flex-col justify-center">
+    <SectionContainer className="min-height-screen flex flex-col justify-center">
       <m.div
         className={clsx(
           "flex flex-col-reverse items-center justify-between gap-20 pt-14",
