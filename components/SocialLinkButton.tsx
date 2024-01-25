@@ -12,7 +12,7 @@ const SocialLinkButton: FC<PropsWithChildren<HTMLProps<HTMLDivElement>>> = ({ cl
     <div className={clsx("flex gap-4", className)} {...prop}>
       {links.map((link) => (
         <Link href={link.url || ""} key={link.label} target="_blank">
-          <Icon icon={link.icon} width={32} height={32} />
+          <Icon icon={link.icon} width={32} height={32} className="transition-all hover:scale-110" />
         </Link>
       ))}
     </div>

@@ -7,6 +7,8 @@ import SectionContainer from "@/components/SectionContainer";
 import SocialLinkButton from "@/components/SocialLinkButton";
 import TechStacksWrapper from "@/components/TechStacksWrapper";
 
+const string = "Phaisan U.";
+
 export default function Landing() {
   return (
     <SectionContainer className="flex flex-col justify-center">
@@ -20,17 +22,23 @@ export default function Landing() {
         viewport={{ once: true, amount: 0.3 }}
         variants={varContainer()}
       >
-        <m.div variants={varFade().inUp}>
-          <h1 className="text-3xl font-bold leading-[62px] md:text-5xl">
+        <m.div variants={varFade().inUp} className="cursor-default">
+          <h1 className="text-3xl font-bold md:text-5xl">
             <span className="text-blue-400">Phaisan U.</span> <br />
             Frontend Developer
           </h1>
           <p className="mt-2 text-lg text-gray-600 md:text-2xl">Based in Auckland, New Zealand </p>
-          <SocialLinkButton className="mt-5 md:mt-28 " />
+          <SocialLinkButton className="mt-10 md:mt-28 " />
         </m.div>
         {/* <m.img variants={varFade().inUp} src="/assets/images/landing.svg" alt={""} className="md:w-[min(45%,420px)]" /> */}
         <m.div className="relative w-3/5 md:w-[min(45%,320px)]" variants={varFade().inUp}>
-          <m.img whileHover={{ scale: 1.1 }} src="/me.jpg" alt="Phaisan" className="box-shadow-3 rounded-full" />
+          <m.img
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            src="/me.jpg"
+            alt="Phaisan"
+            className="box-shadow-3 rounded-full"
+          />
           <m.img
             src="/assets/icons/picIconSet.svg"
             alt="icons"

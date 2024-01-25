@@ -60,7 +60,7 @@ export type NavLinkType = { label: string; herf: string };
 
 export const navLink: NavLinkType[] = [
   {
-    label: "👨🏻‍💻About me",
+    label: "About me👨🏻‍💻",
     herf: "#about",
   },
   {
@@ -68,11 +68,11 @@ export const navLink: NavLinkType[] = [
     herf: "#experience",
   },
   {
-    label: "💻Project",
+    label: "Project💻",
     herf: "#project",
   },
   {
-    label: "📱Contact",
+    label: "Contact📱",
     herf: "#contact",
   },
 ];

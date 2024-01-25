@@ -33,7 +33,7 @@ export const techStacks: TechStacksType[] = [
     icon: "vscode-icons:file-type-tailwind",
   },
   {
-    label: "Redux",
-    icon: "skill-icons:redux",
+    label: "Figma",
+    icon: "devicon:figma",
   },
 ];

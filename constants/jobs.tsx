@@ -14,7 +14,7 @@ const jobs: JobsType[] = [
     workplace: "ForwardX (FWX)",
     position: "Lead Frontend Developer",
     companyDesc: "A FinTech Startup, providing financial services in blockchain.",
-    duration: "July 2021 - Present",
+    duration: "July 2021 - December 2023",
     description: [
       <p key="Project">
         <b>Project structure and development</b>: Evaluate and research the most effective frameworks and best practices
@@ -35,7 +35,7 @@ const jobs: JobsType[] = [
     workplace: "Intnode",
     position: "Frontend Developer",
     companyDesc: "Providing Crypto Investment Advice, Insights and Analysis.",
-    duration: "February 2023 - Present",
+    duration: "February 2023 - December 2023",
     description: [
       <p key="1">
         <b>Project Development</b>: Developed interactive charts using the TradingView Chart Library, enhancing user

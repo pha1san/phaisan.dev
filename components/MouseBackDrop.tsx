@@ -2,12 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-// const kinet = new Kinet({
-//   acceleration: 0.06,
-//   friction: 0.2,
-//   names: ["x", "y"],
-// });
-
 const MouseBackDrop = () => {
   const [X, setX] = useState(0);
   const [Y, setY] = useState(0);
@@ -17,10 +11,6 @@ const MouseBackDrop = () => {
       setX(event.pageX);
       setY(event.pageY - 60);
     });
-
-    // return () => {
-    //   second;
-    // };
   }, []);
 
   return (

@@ -2,31 +2,42 @@
 
 import React, { useRef } from "react";
 
+import { m } from "framer-motion";
 import { useHover } from "usehooks-ts";
 
 import { techStacks } from "@/constants/techstack";
 
 import TechStackBox from "./TechStackBox";
+import { varContainer, varFade } from "./animate";
 
 const TechStacksWrapper = () => {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
 
   return (
-    <div className="my-16 flex flex-col items-center gap-10 pt-16">
-      <h2 className="text-center text-2xl text-gray-600">Tech Stacks</h2>
-      <div className="flex min-h-[136px] flex-wrap justify-center gap-8" ref={hoverRef}>
+    <m.div
+      className="my-16 flex flex-col items-center gap-10 pt-16"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={varContainer()}
+    >
+      <m.h2 className="text-center text-2xl text-gray-600" variants={varFade().inUp}>
+        Tech Stacks
+      </m.h2>
+      <m.div className="flex min-h-[136px] flex-wrap justify-center gap-8" ref={hoverRef}>
         {techStacks.map((tech) => (
-          <TechStackBox
-            icon={tech.icon}
-            label={tech.label}
-            key={tech.label}
-            isActive={isHover}
-            // className="h-fit w-[72px] "
-          />
+          <m.div key={tech.label} variants={varFade().inUp}>
+            <TechStackBox
+              icon={tech.icon}
+              label={tech.label}
+              isActive={isHover}
+              // className="h-fit w-[72px] "
+            />
+          </m.div>
         ))}
-      </div>
-    </div>
+      </m.div>
+    </m.div>
   );
 };
 
