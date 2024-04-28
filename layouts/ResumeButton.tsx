@@ -7,7 +7,7 @@ const ResumeButton = () => {
       <m.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="h-8 rounded-lg bg-blue-300/40 px-5 text-lg font-semibold text-blue-primary"
+        className="transi h-8 rounded-lg bg-blue-300/40 px-5 text-lg font-semibold text-blue-primary"
       >
         Resume
       </m.button>

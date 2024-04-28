@@ -3,16 +3,16 @@
 import React, { useRef } from "react";
 
 import { m } from "framer-motion";
-import { useHover } from "usehooks-ts";
+// import { useHover } from "usehooks-ts";
 
 import { techStacks } from "@/constants/techstack";
 
+import { varFade } from "./animate";
 import TechStackBox from "./TechStackBox";
-import { varContainer, varFade } from "./animate";
 
 const TechStacksWrapper = () => {
   const hoverRef = useRef(null);
-  const isHover = useHover(hoverRef);
+  // const isHover = useHover(hoverRef);
 
   return (
     <m.div
@@ -20,7 +20,7 @@ const TechStacksWrapper = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
-      variants={varContainer()}
+      // variants={varContainer()}
     >
       <m.h2 className="text-center text-2xl text-gray-600" variants={varFade().inUp}>
         Tech Stacks
@@ -31,7 +31,7 @@ const TechStacksWrapper = () => {
             <TechStackBox
               icon={tech.icon}
               label={tech.label}
-              isActive={isHover}
+              isActive={true}
               // className="h-fit w-[72px] "
             />
           </m.div>
