@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 import HeaderBox from "@/components/HeaderBox";
+import MouseBackDrop from "@/components/MouseBackDrop";
 import { PROJECTS } from "@/constants/projects";
 
 export default function Project() {
   return (
     <main className="relative mt-[60px] p-6 ">
+      <MouseBackDrop />
       <HeaderBox
         title={<h1 className="mb-3 text-3xl font-bold">💻 Project</h1>}
         desc={"Each project is a unique piece of development"}
