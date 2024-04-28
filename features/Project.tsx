@@ -1,6 +1,7 @@
 import HeaderBox from "@/components/HeaderBox";
 import ProjectCarosel from "@/components/ProjectCarosel";
 import SectionContainer from "@/components/SectionContainer";
+import Link from "next/link";
 
 const Project = () => {
   return (
@@ -10,6 +11,11 @@ const Project = () => {
         <HeaderBox title={"💻 Project"} desc={"Each project is a unique piece of development"} className="mr-auto" />
       </div>
       <ProjectCarosel />
+      <div className="w-full text-center mt-10">
+        <Link href={"/projects"} className="text-blue-700 underline font-medium text-sm">
+          See all projects
+        </Link>
+      </div>
     </SectionContainer>
   );
 };
