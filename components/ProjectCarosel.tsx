@@ -14,6 +14,7 @@ import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 
 import "@/styles/carosel.scss";
+import Link from "next/link";
 
 const ProjectCarosel: FC = () => {
   return (
@@ -22,8 +23,7 @@ const ProjectCarosel: FC = () => {
         modules={[Autoplay, Navigation, Pagination, EffectCarousel]}
         effect="carousel"
         grabCursor={true}
-        loop={true}
-        loopAdditionalSlides={1}
+        loop={false}
         slidesPerView={"auto"}
         navigation={{
           nextEl: ".swiper-button-next",
@@ -34,12 +34,15 @@ const ProjectCarosel: FC = () => {
         //   delay: 3000,
         // }}
       >
-        {PROJECT.map(({ title, img, desc }, index) => (
+        {PROJECT.map(({ title, img, desc, link }, index) => (
           <SwiperSlide
             key={index}
+
             // className="relative h-[380px] w-[520px] max-w-[calc(100%_-_48px)] rounded-lg bg-red-600"
           >
-            <img src={img} alt="" className="h-[70%] w-full rounded-t-lg sm:h-4/5" />
+            <Link href={link} target="_blank" rel="noreferrer">
+              <img src={img} alt="" className="h-[70%] w-full rounded-t-lg sm:h-4/5" />
+            </Link>
             <div className="h-[30%] overflow-hidden rounded-b-lg px-5 py-2 sm:h-1/5">
               <h3 className="text-lg font-bold">{title}</h3>
               <p className="h-[2lh] overflow-hidden text-ellipsis text-sm">{desc}</p>
